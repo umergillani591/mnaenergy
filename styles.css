@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 body {
+    padding: 0%;
     margin: 0;
     background-color: #f5f5f5;
     font-family: 'Roboto', sans-serif;
@@ -422,6 +423,9 @@ body {
 /* Responsive Design */
 
 @media (max-width: 768px) {
+    .about-section-container{
+        flex-direction: column;
+    }
     .parallax-container {
         display: flex;
         flex-direction: column-reverse; /* Moves the image below the content */
@@ -524,10 +528,6 @@ body {
         gap: 20px;
     }
 
-    .content-box {
-        width: 100%;
-        padding: 15px;
-    }
 
     .heading {
         font-size: 28px;
@@ -948,7 +948,7 @@ h2, h3, p {
     width: 87%;
     margin: 50px auto;
     height: auto;
-    padding: 50px;
+    padding: 5%;
     background-color: #a7a7a791;
     border-radius: 10px;
 }
@@ -966,8 +966,8 @@ h2, h3, p {
     }
 
     .dpdf {
-        width: 90%;
-        padding: 30px; /* Reduces padding on smaller screens */
+        /* width: 90%; */
+        /* padding: 30px;  */
     }
 }
 
@@ -983,8 +983,8 @@ h2, h3, p {
     }
 
     .dpdf {
-        width: 100%;
-        padding: 20px; /* Further adjusts padding */
+        /* width: 100%; */
+        /* padding: 20px;  */
     }
 }
 
