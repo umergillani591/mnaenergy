@@ -414,10 +414,14 @@ body {
 .content-box {
     width: 100%;
     max-width: 700px;
-    text-align: left;
+    text-align: center;
     line-height: 1.8;
     padding: 20px;
     margin: auto;
+}
+.leader-head {
+    color: rgba(59, 59, 59, 0.521);
+    text-align: center;
 }
 
 /* Responsive Design */
