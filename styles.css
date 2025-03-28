@@ -59,7 +59,7 @@ body {
 
 .header-info .email-link, 
 .header-info .phone {
-    color: #ffffff;
+    color: #030303;
     text-decoration: none;
 }
 
@@ -232,7 +232,7 @@ body {
     .header-info {
         justify-content: center;
         width: 100%;
-        margin-bottom: 10px;
+        margin-top: 15px;
     }
 
     .header-socials {
@@ -396,8 +396,7 @@ body {
 .parallax-item.image-1 {
     position: absolute;
     top: 0;
-    right: 15%;
-    z-index: 1;
+    /* right: 15%; */
     width: 50%;
     max-width: 400px;
     height: 500px; /* Set an explicit height */
@@ -410,35 +409,40 @@ body {
     border-radius: 10px;
 }
 
-/* Image 2 (Front Image) */
-.parallax-item.image-2 {
-    position: absolute;
-    top: 100px;
-    left: 20%;
-    z-index: 2;
-    width: 50%;
-    max-width: 450px;
-    height: 500px;
-
-}
-
-.parallax-item.image-2 img {
-    width: 100%;
-    height: 400px; /* Ensures the image fills the container */
-    object-fit: cover;
-    border-radius: 10px;
-}
-
 /* Content Box */
 .content-box {
     width: 100%;
     max-width: 700px;
     text-align: left;
+    line-height: 1.8;
     padding: 20px;
     margin: auto;
 }
 
 /* Responsive Design */
+
+@media (max-width: 768px) {
+    .parallax-container {
+        display: flex;
+        flex-direction: column-reverse; /* Moves the image below the content */
+        align-items: center;
+        text-align: center;
+    }
+
+    .parallax-item.image-1 {
+        order: 2; /* Ensures the image comes after content */
+        width: 100%;
+        max-width: 350px;
+        position: relative;
+    }
+
+    .content-box {
+        order: 1; /* Ensures the content stays above the image */
+        width: 90%;
+        padding: 20px;
+    }
+}
+
 @media (max-width: 1024px) {
     .about-section {
         flex-direction: column;
@@ -454,8 +458,7 @@ body {
         gap: 20px;
     }
 
-    .parallax-item.image-1,
-    .parallax-item.image-2 {
+    .parallax-item.image-1 {
         position: relative;
         width: 80%;
         max-width: 350px;
@@ -608,6 +611,7 @@ h2, h3, p {
     height: 150px;
     text-align: center;
     flex-direction: row;
+    justify-content: center;
 }
 
 .pro-content-image {
@@ -620,6 +624,7 @@ h2, h3, p {
     color: white;
     font-size: 18px;
     margin: 0; /* Remove default margin */
+    text-align: center;
 }
 
 /* Video Section */
@@ -806,15 +811,15 @@ h2, h3, p {
 
 /* General Container */
 .container {
-    width: 90%;
-    max-width: 900px;
+    width: 100%;
+    /* max-width: 1500px; */
     margin: auto;
 }
 
 /* Layout */
 .content-wrap {
     background: #fff;
-    padding: 25px;
+    padding: 30px;
     border-radius: 8px;
     border: 1px solid #ddd; /* Subtle border for structure */
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Light shadow for depth */
@@ -826,18 +831,17 @@ h2, h3, p {
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px; /* Space between columns */
+    flex-wrap: wrap;
 }
 
-/* Left Column */
-.col:first-child,
-.col:last-child {
+/* Columns */
+.col {
     flex: 1;
     max-width: 50%; /* Each takes 50% space */
 }
 
 /* Headings */
 .heading h5 {
-    /* font-style: italic; */
     color: #004085;
     font-weight: 500;
     margin-bottom: 5px;
@@ -878,14 +882,110 @@ h2, h3, p {
 /* Paragraph Styling */
 .main-content p {
     font-size: 16px;
-    color: #444;
+    color: #363636;
     text-align: justify;
     margin-bottom: 15px;
 }
 
+/* Section Headings */
 .col h3 {
-    color: #1100ff;
+    color: #555555;
     text-decoration: underline;
+    margin-top: 20px;
+}
+
+/* Commitment List */
+.col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.col ul li {
+    /* background: url('https://cdn-icons-png.flaticon.com/16/1828/1828640.png') no-repeat left center; */
+    background-size: 16px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.learn-more {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 15px; /* Adds padding for better spacing */
+}
+
+.learn-more p {
+    font-size: 18px;
+    color: #333;
+    max-width: 600px;
+    margin: auto; /* Centers text for better readability */
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1e73be;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #155a8a;
+}
+
+/* Responsive Design */
+.dpdf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 87%;
+    margin: 50px auto;
+    height: auto;
+    padding: 50px;
+    background-color: #a7a7a791;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .learn-more p {
+        font-size: 16px;
+        padding: 0 10px; /* Reduces padding for smaller screens */
+    }
+
+    .download-btn {
+        font-size: 14px;
+        padding: 10px 16px; /* Adjusts button size */
+    }
+
+    .dpdf {
+        width: 90%;
+        padding: 30px; /* Reduces padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .learn-more p {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+
+    .download-btn {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    .dpdf {
+        width: 100%;
+        padding: 20px; /* Further adjusts padding */
+    }
 }
 
 /* Responsive Design */
@@ -894,8 +994,7 @@ h2, h3, p {
         flex-direction: column;
     }
 
-    .col:first-child,
-    .col:last-child {
+    .col {
         max-width: 100%;
     }
 
