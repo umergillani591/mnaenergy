@@ -9,15 +9,22 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <!-- jQuery (Required for Owl Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -83,7 +90,7 @@
                                 <ul class="menu">
                                     <li><a href="index.html"><span>Home</span></a></li>
                                     <li><a href="aboutus.html"><span>About Us</span></a></li>
-                                    <li><a href="images.html"><span>Images&Videos</span></a></li>
+                                    <li><a href="image.html"><span>Images&Videos</span></a></li>
                                     <li><a href="img/Corporate Profile  MNA 2011 (1).pdf" target="_blank"
                                             rel="noopener noreferrer">
                                             <span>MNA ENERGY (PVT.) LIMITED LPG</span></a></li>
@@ -96,46 +103,27 @@
             </div>
         </div>
     </div>
+    <div class="gallery-header">
+        <h1 class="gallery-title">Photo Gallery</h1>
+    </div>
 
-    <header class="company-header">
-        <h1 class="company-title">Our Company Gallery</h1>
-    </header>
-
-    <section class="company-gallery">
-        <div class="company-media">
-            <img src="img/banner2.jpg" alt="Company Image 1" class="company-img">
-        </div>
-        <div class="company-media">
-            <img src="img/img1.jpeg" alt="Company Image 2" class="company-img">
-        </div>
-        <div class="company-media">
-            <img src="img/img2.jpeg" alt="Company Image 2" class="company-img">
-        </div>
-        <div class="company-media">
-            <img src="img/img3.jpeg" alt="Company Image 2" class="company-img">
-        </div>
-        <div class="company-media">
-            <img src="img/img4.jpeg" alt="Company Image 2" class="company-img">
-        </div>
-        <div class="company-media">
-            <img src="img/img5.jpeg" alt="Company Image 2" class="company-img">
-        </div>
-        <div class="company-media">
-            <img src="img/img6.jpeg" alt="Company Image 2" class="company-img">
-        </div>
-        <div class="company-media">
-            <img src="img/img8.jpeg" alt="Company Image 2" class="company-img">
-        </div>
+    <section class="gallery-container">
+        <div class="gallery-item"><img src="img/banner2.jpg" alt="Image 1" class="gallery-image"></div>
+        <div class="gallery-item"><img src="img/img1.jpeg" alt="Image 2" class="gallery-image"></div>
+        <div class="gallery-item"><img src="img/img2.jpeg" alt="Image 3" class="gallery-image"></div>
+        <div class="gallery-item"><img src="img/img3.jpeg" alt="Image 4" class="gallery-image"></div>
+        <div class="gallery-item"><img src="img/img4.jpeg" alt="Image 5" class="gallery-image"></div>
+        <div class="gallery-item"><img src="img/img5.jpeg" alt="Image 6" class="gallery-image"></div>
+        <div class="gallery-item"><img src="img/img6.jpeg" alt="Image 6" class="gallery-image"></div>
+        <div class="gallery-item"><img src="img/img8.jpeg" alt="Image 6" class="gallery-image"></div>
     </section>
-
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-about">
                 <h2>About</h2>
-                <p><strong> MNA ENERGY (PVT.) LIMITED </strong> is one of Pakistan's leading LPG (Gas) Marketing
-                    Companies operating a state of the art
+                <p><strong> MNA ENERGY (PVT.) LIMITED </strong> is one of Pakistan's leading LPG (Gas) Marketing Companies operating a state of the art
                     LPG bottling, storage & filling plant at Port Qasim.</p>
             </div>
 
@@ -161,9 +149,11 @@
         <div class="bottom-bar">
             <p>© 2025 - MNA ENERGY (PVT.) LIMITED Pakistan. All Rights Reserved.</p>
         </div>
+
     </footer>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script>
         $(document).ready(function () {
